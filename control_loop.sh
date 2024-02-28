@@ -1,7 +1,7 @@
 #!/bin/bash
-echo flow_channels = 22\;>control.scad
+echo flow_channels = 18\;>control.scad
 echo columns = 3\;>>control.scad
-echo control_regions = 8\;>>control.scad
+echo control_regions = 6\;>>control.scad
 echo control = [ >>control.scad
 for x0 in $(seq 0 4)
 do
@@ -9,10 +9,7 @@ for x1 in $(seq $(($x0+1)) 5 )
 do
 for x2 in $(seq $(($x1+1)) 6 )
 do
-for x3 in $(seq $(($x2+1)) 7 )
-do
-echo $(echo [ $x0, $x1, $x2, $x3 ], ) >>control.scad
-done
+echo $(echo [ $x0, $x1, $x2 ], ) >>control.scad
 done
 done
 done
