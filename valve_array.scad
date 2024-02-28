@@ -1,15 +1,15 @@
 // Compile the structure for the valve array
 // EAJ 2024
 
-include <C:/Users/eajoseph/Desktop/tmp/params.scad>;
+include <./params.scad>;
 
-include  <C:/Users/eajoseph/Desktop/tmp/reentrant_structures.scad>
+include  <./reentrant_structures.scad>
 
-include  <C:/Users/eajoseph/Desktop/tmp/closeable_segment.scad>
+include  <./closeable_segment.scad>
 
-include  <C:/Users/eajoseph/Desktop/tmp/always_open_segment.scad>
+include  <./always_open_segment.scad>
 
-include <C:/Users/eajoseph/Desktop/tmp/control.scad>;
+include <./control.scad>;
 
 function inlist(x,list,i = 0, m = false) = i < len(list) ? inlist(x,list,i+1,m||(list[i]==x)) : m;
 
